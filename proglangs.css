@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+text-align: center;
+/* Liste for farger i Lab1*/
+#red {color: #F00;}
+#blue {color: blue;}
+#green {color: green;}
+#orange {color: orange;}
+#pink {color: pink;}
+#cyan {color: cyan;}
+#yellow {color: #FF0;}
+#1 {color: #FC3 ;}
+#2 {color: #306;}
+#lgreen {color: #0F0;}
+#3 {color: #C36;}
+#grey {color: #666;}
+#4 {color: #C93;}
+
+
+body {
+	/* Setter farger på bakgrunn og skrift, paddingen her gjør at navigeringsboksen vår har avstandt fra resten av hovedsiden "em" er en målingsavstand*/
+    padding-left: 12em;
+    color: #C93;
+    background-color: #066}
+/* Selekterer fonten for brødteksten, og for overskriften som står i "h1" */
+    {font-family: Georgia, "Times New Roman",
+          Times, serif;}
+    h1 {
+    font-family: Helvetica, Geneva, Arial,
+          SunSans-Regular, sans-serif }
+/* bestemmer hvor stor navigeringsboksen skal være, og hvor langt den skal stå vekk i fra andre elementer */
+ul.navbar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 2em;
+    left: 1em;
+    width: 9em }
+	/*bestemmer bakgrunnsfarge, og hvordan navigeringsboks-elementet skal se ut rundt */ 
+ul.navbar li {
+    background: white;
+    margin: 0.5em 0;
+    padding: 0.3em;
+    border-right: 1em solid black }
+  ul.navbar a {
+    text-decoration: none }
+/*Bestemmer fargene på linkene i navigerningsboksen, slik de forandrer seg når de er trykket innpå */
+  a:link {
+    color: blue }
+  a:visited {
+    color: purple }
+	
+address {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: thin dotted }
