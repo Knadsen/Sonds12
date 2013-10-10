@@ -1,50 +1,68 @@
 @charset "UTF-8";
 
 text-align: center;
-/* Liste for farger i Lab1*/
-#red {color: #F00;}
+/* Liste for farger i Lab1_del0*/
+#red {color: red;}
 #blue {color: blue;}
 #green {color: green;}
 #orange {color: orange;}
 #pink {color: pink;}
 #cyan {color: cyan;}
-#yellow {color: #FF0;}
+#yellow {color: yellow;}
 #1 {color: #FC3 ;}
 #2 {color: #306;}
-#lgreen {color: #0F0;}
+#lgreen {color: lightgreen;}
 #3 {color: #C36;}
-#grey {color: #666;}
+#grey {color: #CCC;}
 #4 {color: #C93;}
 
+/**/
+#Centered
+	{text-align:center;
+	margin-left:25%;
+	margin-right: 25%;
+	margin-top: 20px;
+	}
+	
+	/*søkebaren fra lab2_del1, nei den gjør ingenting akkurat nå, men den skulle implementeres i som en del av "designforslaget", hva de forskjellige syntaxene gjør kommer senere.*/
+ul.søkebar {
+	position: absolute;
+	left: 558px;
+	top: 24px;
+	}	
 
-body {
+body 
+{
 	/* Setter farger på bakgrunn og skrift, paddingen her gjør at navigeringsboksen vår har avstandt fra resten av hovedsiden "em" er en målingsavstand*/
     padding-left: 12em;
     color: #C93;
     background-color: #066}
-/* Selekterer fonten for brødteksten, og for overskriften som står i "h1" */
+/* Selekterer fonten (skrifttypen) for brødteksten, og for overskriften som står i "h1" */
     {font-family: Georgia, "Times New Roman",
           Times, serif;}
     h1 {
     font-family: Helvetica, Geneva, Arial,
           SunSans-Regular, sans-serif }
-/* bestemmer hvor stor navigeringsboksen skal være, og hvor langt den skal stå vekk i fra andre elementer */
+/* Bestemmer hvor stor navigeringsboksen skal være "width+height", og hvor vi ønsker å posisjonere navigeringsboksen (top+left), absolute position gjør at posisjonering ikke vil påvirkes av andre elementer*/
 ul.navbar {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    top: 2em;
-    left: 1em;
-    width: 9em }
-	/*bestemmer bakgrunnsfarge, og hvordan navigeringsboks-elementet skal se ut rundt */ 
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	top: 56px;
+	left: 17px;
+	width: 135px;
+	height: 149px;
+}
+	/* Bestemmer bakgrunnsfarge, og hvordan navigeringsboks-elementet skal se ut, paddingen vil i dette tilfellet bestemme hvor mye hvitt som skal være rundt linkene, og marginen vil her være hvor linkene ligger hverandre. */ 
 ul.navbar li {
     background: white;
-    margin: 0.5em 0;
+    margin: 0.5em;
     padding: 0.3em;
-    border-right: 1em solid black }
+    }
+	/* Vi kan velge hvordan vi ønsker at teksten skal "dekoreres" i dette tilfellet ønsker vi ikke noe, men vi ønsker kansje forandre dette senere. */
   ul.navbar a {
-    text-decoration: none }
+    text-decoration: none}
 /*Bestemmer fargene på linkene i navigerningsboksen, slik de forandrer seg når de er trykket innpå */
   a:link {
     color: blue }
