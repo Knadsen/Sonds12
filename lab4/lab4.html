@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+ 
+	<title>Lab4</title>
+	<script src="js/jquery-1.8.1.js" type="text/javascript"></script>
+	<script src="js/jquery.scrollto-1.4.7.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="lab4.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+<!-- Jquery biblotek gjøres synlig her -->
+<!-- <script src="jquery.scrollto-1.4.7.js"></script> -->
+<script type="text/javascript"> // her implementeres den dynamiske koden //markere valg og rulle den til selektert valg etter ID
+	$(function() {
+		$( ".firstUL li" ).each(function() {
+			$( this ).click(function() {
+				$( ".firstUL li" ).removeClass( "selected" );
+				$( this ).addClass( "selected" );
+				elementClick = $( this ).attr( "id" );
+			
+				// ruller til det selekterte i DOM treet
+				$( ".content-container" ).scrollTo($( "#content-for-"+elementClick), 800);
+		
+				//Endre bakgrunnsfarge
+				$( ".content-container div" ).css( {'background-color' : '#ffffff'} );
+				$( ".content-container #content-for-"+elementClick ).css( {'background-color' : '#d2e2fc'} );
+			});
+		}); 
+	
+		//Når tilbakeknappen trykkes, og 'A' markeres og returnerer tilbake til toppen
+		$( '.return-to-top' ).click(function() {
+			$( ".firstUL li" ).each(function() {
+				$( ".firstUL li" ).removeClass( "selected" );
+			});
+			
+			//legge til klasse
+			$( "#a" ).addClass( "selected" );
+			$( ".content-container" ).scrollTo($( "#content-for-a" ), 800);
+				//sette bakgrunnsfarge til hvit
+			$( ".content-container div" ).css( {'background-color' : '#ffffff'} );
+			$( ".content-container #content-for-a" ).css( {'background-color' : '#d2e2fc'} );
+		});
+	});		
+
+</script>
+
+</head>
+<body>
+
+<div id="body-container">
+	<div class="glossary-container">
+		<ul class="firstUL">
+			<li id="a" class="selected">A</li>
+			<li id="b">B</li>
+			<li id="c">C</li>
+            <li id="d">D</li>
+		</ul>
+	</div>
+	
+	<div class="content-container">
+	<!-- A -->
+		<div id="content-for-a" style="background-color:#d2e2fc">
+			<dl>
+				<dt>Actionscript</dt>
+					<dd>info om Actionscript</dd>
+                    
+                <dt>Applescript</dt>
+                	<dd>info om Applescript</dd>
+                <dt>Asp</dt>
+                	<dd>info om Asp</dd>
+            </dl>
+          <p class="return-to-top">Tilbake til toppen</p>
+        </div>    
+            
+        <div id="content-for-b">
+			<dl>
+				<dt>BASIC</dt>
+					<dd>Info om BASIC</dd>
+                    
+            </dl>
+          <p class="return-to-top">Tilbake til toppen</p>
+        </div>    
+        
+        <div id="content-for-c">
+			<dl>
+				<dt>C</dt>
+					<dd>Info om C</dd>
+                <dt>C++</dt>
+                	<dd>Info om C++</dd>
+                <dt>Clojure</dt>
+                	<dd>Info om Clojure</dd>
+                <dt>COBOL</dt>
+                	<dd>Info om Cobol</dd>
+                <dt>ColdFusion</dt>
+                	<dd>Info om ColdFusion</dd>
+            </dl>
+          <p class="return-to-top">Tilbake til toppen</p>
+        </div>    
+        <div id="content-for-d">
+			<dl>
+				<dt>Datalog</dt>
+					<dd>Info om Datalog</dd>
+            </dl>
+         <p class="return-to-top">Tilbake til toppen</p>       
+        </div>
+                   
+        </div>
+     </div>
+</div>
+                   
+ 
+
+
+</body>
