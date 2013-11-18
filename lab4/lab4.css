@@ -45,7 +45,7 @@ border:1px solid #3285ef;
 }
 
 .firstUL li {
-	background: transparent url (link_sprite_img.jpg) no-reapeat scroll 0 0;
+	background: transparent url(link_sprite_img.jpg) no-repeat scroll 0 0;
 	display: inline;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 16pt;
@@ -55,3 +55,8 @@ border:1px solid #3285ef;
 	cursor: pointer;
 }
 
+.firstUL li.selected{
+	background: transparent url(link_sprite_img.jpg) no-repeat scroll 0px -57px;
+	color:#FFF;
+	font-weight: bold;
+}
